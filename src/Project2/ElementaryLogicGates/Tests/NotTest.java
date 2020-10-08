@@ -15,7 +15,7 @@ public class NotTest {
         not1.compute(true);
         assertEquals(false,not1.out);
 
-        not1.compute(true);
-        assertEquals(false,not1.out);
+        not1.compute(false);
+        assertEquals(true,not1.out);
     }
 }
