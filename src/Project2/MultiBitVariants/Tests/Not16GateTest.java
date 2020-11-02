@@ -11,9 +11,9 @@ public class Not16GateTest {
     @Test
     public void compute() {
         Not16 not16 = new Not16();
-        boolean[] input = BMath.stringToBooleanArray("1111111111111110");
+        boolean[] input = BMath.stringToBooleanArray("1111111111111100");
         not16.compute(input);
-        boolean[] expected = BMath.stringToBooleanArray("0000000000000001");
+        boolean[] expected = BMath.stringToBooleanArray("0000000000000011");
         assertArrayEquals(expected,not16.out);
     }
 }
