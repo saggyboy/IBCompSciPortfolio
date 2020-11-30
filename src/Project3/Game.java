@@ -29,8 +29,10 @@ public class Game extends JPanel {
                 buttonClicked.full = true;
                 if (x) {
                     buttonClicked.setText("X");
+                    buttonClicked.setForeground(new Color(255,0,0));
                 } else {
                     buttonClicked.setText("O");
+                    buttonClicked.setForeground(new Color(0,0,255));
                 }
                 if (win()){
                     String team;
@@ -41,6 +43,7 @@ public class Game extends JPanel {
                             team = "O";
                         }
                         b.setText(team + " Wins");
+                        b.setForeground(new Color(0,255,0));
                     }
                 }
                 x = !x;
