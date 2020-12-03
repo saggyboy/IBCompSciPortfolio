@@ -9,7 +9,11 @@ public class Main {
         File file = new File("/Users/andrewseybold/Desktop/CSVs/read.csv");
         Parser parser = new Parser(file);
 
-        List<String> data = parser.getDataInColumn(0);
+        List<String> data = parser.getDataInColumn(1);
+        for (int i = 0; i < data.size(); i++) {
+            System.out.println(data.get(i));
+        }
+
         double avg = 0;
         for (int i = 0; i < data.size(); i++) {
             int curr = Integer.parseInt(data.get(i));
