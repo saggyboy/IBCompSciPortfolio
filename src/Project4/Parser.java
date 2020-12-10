@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Parser {
     private Scanner scanner;
-    private File file;
+    private int fileSize;
 
     public Parser(File file) {
         try {
@@ -17,12 +17,31 @@ public class Parser {
             System.out.println("file was not found");
             e.printStackTrace();
         }
+
+        fileSize = 4;
+//        while (scanner.hasNext()){
+//            fileSize++;
+//        }
     }
 
-    public void printData(){
-        while(scanner.hasNext()){
-            scanner.next();
+    public static double avgData(ArrayList<String> data){
+        double avg = 0;
+        for (int i = 0; i < data.size(); i++) {
+            int curr = Integer.parseInt(data.get(i));
+            avg += curr;
         }
+
+        avg /= data.size();
+        return avg;
+    }
+
+    public double[] getData(){
+        double[] data = new double[fileSize];
+        for (int i = 0; i < fileSize; i++) {
+            data[i] = Double.parseDouble(scanner.next());
+        }
+
+        return data;
     }
 
     public List getDataInColumn(int column){
