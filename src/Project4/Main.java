@@ -13,9 +13,10 @@ public class Main {
         Writer writer = new Writer("/Users/andrewseybold/Desktop/CSVs/output.csv");
 
         SelectionSorter selectionSorter = new SelectionSorter();
+        BubbleSorter bubbleSorter = new BubbleSorter();
 
         double[] data = parser.getData();
-        double[] sortedData = selectionSorter.sort(data);
+        double[] sortedData = bubbleSorter.sort(data);
 
         System.out.println("hello");
 
@@ -23,6 +24,7 @@ public class Main {
         for (int i = 0; i < data.length; i++) {
             System.out.println(data[i]);
             double sortedDatum = sortedData[i];
+            System.out.println(sortedDatum);
             stringBuilder.append(sortedDatum + " ");
         }
         writer.writeData((stringBuilder.toString()));
