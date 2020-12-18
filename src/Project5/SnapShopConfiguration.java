@@ -19,6 +19,7 @@ public class SnapShopConfiguration {
       
       theShop.addFilter(new FlipHorizontalFilter(), "Flip Horizontal");
       theShop.addFilter(new DeMosaicFilter(), "De-Mosaic");
+      theShop.addFilter(new FlipVerticalFilter(), "Flip Vertical");
     }
     
     /** Main method */
